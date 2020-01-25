@@ -164,6 +164,14 @@ class AInt(object):
         # (you are allowed to use your addition implementation
         # and my subtraction implementation which in turn
         # uses it)
+        if y==0
+            return 0
+        z=int(self)*(int(other)/2)
+        elif int(other)%2==0
+            return 2*z
+        else
+            return int(self)+2*z
+
         out = AInt()
         for _ in range(int(other)):
             out += self
@@ -178,7 +186,18 @@ class AInt(object):
         # (you are allowed to use your addition implementation
         # and my subtraction implementation which in turn
         # uses it)
-        return self, self
+        if self==0
+            return 0, 0
+        q=int(self)/2
+        r=int(self)%int(other)
+        q=2*q
+        r=2*r
+        if int(self)%2==1
+            r=r+1
+        elif r>=int(other)
+            r=r-int(other)
+            q=q+1
+        return q, r
 
     def __floordiv__(self, other):
         """
